@@ -6,8 +6,6 @@ public class Viagem {
 	private int minutosInicio;
 	private int horaTermino;
 	private int minutosTermino;
-	private int duracaoHoras;
-	private int duracaoMinutos;
 	private int duracaoTotalMinutos;
 
 	private Viagem(int hora, int minutos) {
@@ -43,14 +41,12 @@ public class Viagem {
 
 	public int getDuracaoHoras() {
 		DuracaoHoras dh = new DuracaoHoras(this);
-		duracaoHoras = dh.compute();
-		return duracaoHoras;
+		return dh.compute();
 	}
 
 	public int getDuracaoMinutos() {
 		DuracaoMinutos dm = new DuracaoMinutos(this);
-		duracaoMinutos = dm.compute();
-		return duracaoMinutos;
+		return dm.compute();
 	}
 
 	public int getDuracaoTotalMinutos() {

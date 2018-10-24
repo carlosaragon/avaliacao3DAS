@@ -15,9 +15,13 @@ public class DuracaoMinutos {
 			duracaoMinutos = _viagem.getMinutosTermino() - _viagem.getMinutoInicio();
 		else {
 			duracaoMinutos = 60 - _viagem.getMinutoInicio() + _viagem.getMinutosTermino();
-			if (duracaoMinutos == 60) //caso especial
-				duracaoMinutos = 0;
+			chegouA1Hora();
 		}
 		return duracaoMinutos;
+	}
+
+	private void chegouA1Hora() {
+		if (duracaoMinutos == 60) //caso especial
+			duracaoMinutos = 0;
 	}
 }
